@@ -71,6 +71,10 @@ header h2
     padding: 24px;
     border: 4px solid white;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 /*begin::main*/
@@ -82,7 +86,38 @@ main > section
     flex-direction: row;
     min-height: 100vh;
 }
+
+main section h2
+{
+    font-size: 52px;
+    text-transform: uppercase;
+    font-family: "Josefin Sans";
+    color: var(--Black);
+    font-weight: 300;
+    margin: 0;
+}
 /*end::main*/
+
+/*begin::button*/
+.btn
+{
+    padding: 16px 32px;
+    color: var(--Black);
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 3px solid var(--Black);
+    text-decoration: none;
+    letter-spacing: 8px;
+    font-weight: bold;
+    transition: all .25s ease;
+}
+
+.btn:hover
+{
+    background-color: var(--Black);
+    color: white;
+}
+/*end::button*/
 
 /*begin::interactive-vr*/
 section#interactive-vr
@@ -104,21 +139,16 @@ section#interactive-vr > div:first-child
 section#interactive-vr > div:last-child
 {
     position: absolute;
-    padding: 32px;
+    padding-top: 85px;
+    padding-left: 85px;
     background-color: white;
-    width: 40%;
-    right: 10px;
-    bottom: 10px;
-}
-
-section#interactive-vr > div:last-child h2
-{
-    font-size: 60px;
-    text-transform: uppercase;
-    font-family: "Josefin Sans";
-    color: var(--Black);
-    font-weight: 300;
-    margin-bottom: 0;
+    width: 30%;
+    right: 10vw;
+    bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 section#interactive-vr > div:last-child p
@@ -127,3 +157,150 @@ section#interactive-vr > div:last-child p
     color: var(--Dark-Gray);
 }
 /*end::interactive-vr*/
+
+/*begin::our-creations*/
+section#our-creations
+{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+section#our-creations > div:first-child
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14vh;
+}
+
+section#our-creations > div:nth-child(2)
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section#our-creations > div:nth-child(2) > div
+{
+    width: calc(16vw - 12px);
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    margin-bottom: 4vh;
+}
+
+section#our-creations > div:nth-child(2) > div::before
+{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    /* Created with https://www.css-gradient.com */
+    background: #010101CC;
+    background: -webkit-linear-gradient(bottom, #010101CC, #01010100);
+    background: -moz-linear-gradient(bottom, #010101CC, #01010100);
+    background: linear-gradient(to top, #010101CC, #01010100);
+}
+
+section#our-creations > div:nth-child(2) > div h3
+{
+    margin: 0;
+    color: white;
+    font-family: "Josefin Sans";
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 32px;
+    max-width: 75%;
+}
+
+[data-image="deep-earth"]
+{
+    background-image: url('../images/desktop/image-deep-earth.jpg');
+}
+
+[data-image="night-arcade"]
+{
+    background-image: url('../images/desktop/image-night-arcade.jpg');
+}
+
+[data-image="soccer-team-vr"]
+{
+    background-image: url('../images/desktop/image-soccer-team.jpg');
+}
+
+[data-image="the-grid"]
+{
+    background-image: url('../images/desktop/image-grid.jpg');
+}
+
+[data-image="from-up-above-vr"]
+{
+    background-image: url('../images/desktop/image-from-above.jpg');
+}
+
+[data-image="pocket-borealis"]
+{
+    background-image: url('../images/desktop/image-pocket-borealis.jpg');
+}
+
+[data-image="the-curiosity"]
+{
+    background-image: url('../images/desktop/image-curiosity.jpg');
+}
+
+[data-image="make-it-fisheye"]
+{
+    background-image: url('../images/desktop/image-fisheye.jpg');
+}
+/*end::our-creations*/
+
+/*begin::footer*/
+footer
+{
+    background-color: var(--Black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    height: 22vh;
+}
+
+footer > div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a
+{
+    color: white;
+    text-decoration: none;
+}
+
+footer > div a:not(:last-child)
+{
+    margin-right: 25px;
+}
+
+footer p
+{
+    color: var(--Dark-Gray);
+}
+/*end::footer*/
