@@ -136,19 +136,32 @@ header h2
         left: 5vw;
     }
 
-    header > nav[data-status="open"] span
+    header > nav[data-status="open"] span[data-menuaction="open"]
+    {
+        display: none;
+    }
+
+    header > nav[data-status="open"] span[data-menuaction="close"]
     {
         position: fixed;
         z-index: 1000;
         top: 50px;
         right: 5vw;
+        cursor: pointer;
     }
 
-    header > nav[data-status="open"] span img
+    header > nav[data-status="open"] span[data-menuaction="close"] img
     {
         position: relative;
         top: auto;
         right: auto;
+        left: auto;
+        bottom: auto;
+    }
+
+    header > nav[data-status="close"]
+    {
+        display: none;
     }
 }
 /*end::header*/
