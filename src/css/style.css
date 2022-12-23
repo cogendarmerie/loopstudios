@@ -100,4 +100,30 @@ section#interactive-vr > div:first-child
     background-repeat: no-repeat;
     background-position: center;    
 }
+
+section#interactive-vr > div:last-child
+{
+    position: absolute;
+    padding: 32px;
+    background-color: white;
+    width: 40%;
+    right: 10px;
+    bottom: 10px;
+}
+
+section#interactive-vr > div:last-child h2
+{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: "Josefin Sans";
+    color: var(--Black);
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+section#interactive-vr > div:last-child p
+{
+    margin-top: 25px;
+    color: var(--Dark-Gray);
+}
 /*end::interactive-vr*/
