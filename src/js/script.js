@@ -1,3 +1,4 @@
 $("nav [data-menuaction]").click(function(){
-    $("nav").data("status","close");
+    alert($(this).data("menuaction"));
+    $("nav").data("status",$(this).data("menuaction"));
 });
