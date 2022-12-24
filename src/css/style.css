@@ -471,8 +471,8 @@ footer
 {
     background-color: var(--Black);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     padding-left: 10vw;
     padding-right: 10vw;
     height: 22vh;
@@ -481,9 +481,18 @@ footer
 footer > div
 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer > div:first-child
+{
+    align-items: left;
+}
+
+footer > div:last-child
+{
+    text-align: right;
 }
 
 footer a
@@ -503,9 +512,34 @@ footer p
 }
 
 @media screen and (max-width: 800px) {
-    footer, footer > div
+    footer
+    {
+        height: auto;
+        padding-top: 6vh;
+        padding-bottom: 6vh;
+    }
+
+    footer, footer > div, footer > div:last-child
     {
         flex-direction: column;
+        text-align: center;
+    }
+
+    footer > div > div
+    {
+        margin-top: 4vh;
+    }
+
+    footer > div:first-child > div:nth-child(2)
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer > div:first-child > div:nth-child(2) a:not(:first-child)
+    {
+        margin-top: 1rem;
     }
 }
 /*end::footer*/
